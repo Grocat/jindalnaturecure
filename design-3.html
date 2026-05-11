@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jindal Naturecure | Green Campus Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#e3dfd5",
+                        "on-secondary": "#ffffff",
+                        "outline": "#72796e",
+                        "tertiary-fixed-dim": "#d4c4ab",
+                        "inverse-surface": "#34302c",
+                        "on-primary-container": "#6ca164",
+                        "surface-variant": "#e9e1dc",
+                        "secondary": "#605e56",
+                        "on-primary-fixed": "#002202",
+                        "tertiary-fixed": "#f1e0c5",
+                        "secondary-fixed": "#e6e2d8",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#efe6e2",
+                        "primary-fixed-dim": "#9dd593",
+                        "primary-container": "#003505",
+                        "surface-dim": "#e1d8d4",
+                        "on-secondary-fixed-variant": "#48473f",
+                        "on-secondary-fixed": "#1c1c15",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f8efea",
+                        "surface": "#fff8f5",
+                        "on-surface-variant": "#42493e",
+                        "primary-fixed": "#b9f1ad",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#342b19",
+                        "tertiary": "#1e1707",
+                        "on-secondary-container": "#64635a",
+                        "on-primary": "#ffffff",
+                        "primary": "#001d02",
+                        "surface-bright": "#fff8f5",
+                        "surface-container-highest": "#e9e1dc",
+                        "secondary-fixed-dim": "#cac6bc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1e1b18",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#9dd593",
+                        "on-tertiary-fixed": "#231a0a",
+                        "on-primary-fixed-variant": "#20511e",
+                        "on-tertiary-container": "#a0927a",
+                        "surface-container-low": "#fbf2ed",
+                        "on-background": "#1e1b18",
+                        "background": "#fff8f5",
+                        "surface-tint": "#386933",
+                        "surface-container": "#f5ece7",
+                        "on-tertiary-fixed-variant": "#504532",
+                        "outline-variant": "#c1c9bb",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-padding": "120px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px rgba(0, 53, 5, 0.05);
+        }
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        section { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm border-b border-white/20 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Jindal Naturecure</span>
+<div class="hidden lg:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 transition-colors duration-300" href="#campus">Our Campus</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#therapies">Therapies</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#sustainability">Sustainability</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#accommodations">Accommodations</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#research">Research</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-sm uppercase tracking-widest hover:bg-primary/90 transition-all">Book Retreat</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] md:h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-container/40 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A breathtaking aerial view of a lush green sanctuary at Jindal Naturecure, featuring thousands of emerald trees and winding walking paths under a soft, golden sunrise. The atmosphere is serene and therapeutic, with misty light filtering through ancient branches, highlighting the premium, nature-centric wellness architecture. The visual style is high-fidelity editorial minimalism with a deep primary green and soft gold color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBVjXU2NxoaJpPmjBeX52grx6UTKT4YHkFA9GiLQmY-MZ3eW1q2GBF7GwKCMynEvmDPuZNHnZ9VF1X1g0giBlEGc2FDme_QR2i--_FLT0aZNlcBY4SUmZnIL1DJrbBqyQJCMeWJePzu_hUORvCs3dZJcI7mNbDrhi8NBJUUIBv9vazU008ZGd05hZCSQr72Nwa__4sjXdES9g4uEOcWEUv0-c1kf45lTbPQAVqogCZAgkh1C1pmMqqveVNZ36UVdh-huVwe_Ci_V0"/>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="glass-panel p-10 md:p-16 rounded-[40px] max-w-3xl text-white">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Healing in the Lap of Nature</h1>
+<p class="font-body-lg text-body-lg mb-10 text-white/90">Experience wellness at a campus enriched with over 3,500 trees, where modern science meets the ancient tranquility of the earth.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-white/20">
+<div>
+<div class="font-headline-md text-headline-md mb-1">3,500+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-white/70">Trees</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md mb-1">56</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-white/70">Tree Clusters</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md mb-1">100%</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-white/70">Natural Healing</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 text-white animate-bounce">
+<span class="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+</div>
+</header>
+<!-- About Section -->
+<section class="py-section-padding bg-surface" id="campus">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-[60px] overflow-hidden ambient-shadow">
+<img class="w-full h-full object-cover" data-alt="A focused image of medicinal botanical species growing in a beautifully curated garden at Jindal Naturecure. Sunlight glistens off dew-covered leaves of holy basil and aloe vera. The setting is clean and high-end, evoking a sense of scientific herbology and quiet luxury. The lighting is soft morning natural light with a pristine, high-key aesthetic focusing on deep greens and soft beige soil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDad01u5LNBPfDFWDARXVP1k2meWpPVaaE4GTF6WjntUo1m77juxhfKZw6V8GhPXOfIzyAYEcvXyltKdnxoSUFo1hmigrMjs4wPdxQYIzEsk6TnNOtpRDUPI4DyByRbxlxDu6f3iaUnxOx6Kri6RSCppPMwtf7ePgDrpojBLyzCo85h57HSue5oGqsKTc6bgONKuSJ97XEC3NE0XgQPm3wf-SHqP9y_N1fvDSBCg8YC5WeirdaYFpQeTKmqijnX5SWBWcON2200qFY"/>
+</div>
+<div class="absolute -bottom-12 -right-12 w-2/3 aspect-square rounded-[40px] overflow-hidden border-[12px] border-surface ambient-shadow hidden md:block">
+<img class="w-full h-full object-cover" data-alt="A peaceful yoga session occurring under the expansive canopy of a large banyan tree. The floor is covered in premium natural mats, and the practitioner is in a meditative pose. The mood is tranquil and restorative, capturing the essence of healing through nature. Soft, dappled sunlight creates a beautiful texture across the scene, emphasizing restorative luxury and wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe4Gggfxt7r7NHL-CSwZNcEBBsZTqM11fvR3dlYsulOfIy7ck2kAByLlE74u2rXiHvHjiN-Ph9OoS_5FDFT8i3YqPWSeq7MKApOdDABC-WxAbdqXtpgQdoC08hIqNf8-mJX2uhPrEa9s3Tv3PNTKnE6vfBpPVh0OA5-936o5VhzlUjAISQdjevr0uIoDCIWTFtOoKHqg3UEAxI92ZH-zcs1E7TQP_lHfAu7CVSy-baJJ9-leM4R0ixaHP8DX91EUfi7DCR5xBlJqc"/>
+</div>
+</div>
+<div class="space-y-8">
+<div class="inline-flex items-center gap-4 text-primary">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Our Heritage</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">What Makes Our Campus Green?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our campus is a living laboratory of natural healing. We have meticulously cultivated an ecosystem that supports biodiversity while providing a serene backdrop for your journey to health.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-6 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Medicinal Plants</span>
+<span class="px-6 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Healing Spaces</span>
+<span class="px-6 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Biodiversity</span>
+<span class="px-6 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Oxygen Hub</span>
+</div>
+<div class="bg-tertiary-fixed/30 p-10 rounded-[32px] space-y-4">
+<p class="font-body-md text-on-tertiary-fixed-variant italic">"Being surrounded by the ancient trees at Jindal is a therapy in itself. The air is noticeably cleaner, and the silence is restorative."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container"></div>
+<span class="font-label-sm text-primary font-bold">Dr. Alok Varma, Senior Practitioner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Green Metrics -->
+<section class="py-section-padding bg-primary-container text-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-10 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed">forest</span>
+<div class="font-display-lg text-4xl mb-2">3,500+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Trees Cataloged</div>
+</div>
+<div class="p-10 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed">potted_plant</span>
+<div class="font-display-lg text-4xl mb-2">56</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Tree Clusters</div>
+</div>
+<div class="p-10 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed">eco</span>
+<div class="font-display-lg text-4xl mb-2">400+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Healing Species</div>
+</div>
+<div class="p-10 rounded-[32px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary-fixed">nest_eco_leaf</span>
+<div class="font-display-lg text-4xl mb-2">100%</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Eco-Conscious</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Health Benefits -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2 space-y-12 order-2 lg:order-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container p-8 rounded-[24px] ambient-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">air</span>
+<h4 class="font-headline-md text-xl mb-3">Superior Air Quality</h4>
+<p class="font-body-md text-on-surface-variant">Our dense foliage acts as a natural air filter, increasing oxygen levels and trapping pollutants.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-[24px] ambient-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">psychology</span>
+<h4 class="font-headline-md text-xl mb-3">Mental Clarity</h4>
+<p class="font-body-md text-on-surface-variant">The color green and the sounds of nature are scientifically proven to reduce cortisol levels.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-[24px] ambient-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">healing</span>
+<h4 class="font-headline-md text-xl mb-3">Faster Recovery</h4>
+<p class="font-body-md text-on-surface-variant">Immersion in nature accelerates physical healing and strengthens the immune system.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-[24px] ambient-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">nightlight</span>
+<h4 class="font-headline-md text-xl mb-3">Restorative Sleep</h4>
+<p class="font-body-md text-on-surface-variant">Natural light-dark cycles and fresh air help regulate your circadian rhythm perfectly.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary-fixed rounded-[60px] -rotate-3 transition-transform group-hover:rotate-0 duration-500"></div>
+<img class="relative z-10 w-full h-[600px] object-cover rounded-[50px] ambient-shadow" data-alt="A wide-angle lifestyle shot of a patient walking slowly along a serene garden path at Jindal Naturecure. The path is lined with exotic flowers and tall medicinal trees. The sunlight is warm and golden, casting long, soft shadows. The overall mood is one of profound peace, luxury, and health recovery. High-resolution imagery with a focus on natural textures and a calm, primary green environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGKWb2Mk-JWK6hZXlN3Twvpv5_IQ8KoJcmfewzn3TcEluj2qDQ6zZtvsl72ze4MLvTQ-ryNHea_cS1d_7HLZKOJ_zVwSqnlHW_IcZ5R65TlZ1HqlTkf-FkQi0B_OXKTfAivlxE0TEeTgYYm6dNImYKiDpFi354vkmfwbloJyfbsEd_VqIsbAwdU4IejLbE4_dCtNMY-c612mvey6jkBlPQaQkBkd24EKLR0itPez8tgXUBHC6YIW1du2kXR5E5MmO0sfBzjzcshW0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Nature Experience Grid -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Immersive Nature Experience</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Explore the diverse ways we integrate nature into your therapeutic journey.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[800px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-[40px] ambient-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stunning view of a dedicated yoga pavilion nestled deep within a forest cluster at the institute. The pavilion is open-sided, with premium wooden floors. The surrounding trees create a living emerald wall. The lighting is soft and ethereal, emphasizing the high-end, minimalist wellness experience. The color palette is rich in deep greens and natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0cNR6x59UbEivBaPwkE4I87bvwcDUu9Ku7ZaojMPwZsfwvFfZDnZMIwXpDx1BPS1cksJ0VL4HXLZeLAltrz1gO2SM0NYAvQ8KRUBPaN6paRqlLxkx6myoSaCBy0synKFJ4p1T1gNhHKwklDSJxMFgGYJkEWjRrKGfOS2QS4ErM1sKy5aJky45RrEArtUfZ12BfwhiRcwVixOFtBVByuJ21HWKnn2n380Tpv29aHpFN6J14x_X01c14zxMbDO4GNJPWk7-OTG6m3E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-3xl mb-2">Yoga in the Wild</h3>
+<p class="font-body-md text-white/80">Connecting breath with the rhythmic rustle of leaves.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-[40px] ambient-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed shot of a barefoot person walking mindfully on a reflexology path made of smooth natural pebbles and moss. The path is dappled with soft sunlight filtering through the trees. The atmosphere is one of therapeutic luxury and tactile connection with the earth. The image emphasizes high-fidelity natural textures and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0v9tISptRRD3R-0mfPcOIiQr1EPQDXXQuxb6zmQp3P06BM_nFPUsMnb2wEcBI203EoaNn_qZwx6sIZgkTA0pRxgSe5aPgCq8sJMdkIlQbkU0X4MLER_iQoBfK52XfxmX8s7LKYvos9lEquqdykrc1TMIBquQEfr7rHJJBpmi6QTe-uw6FFBHcW4R9mPGVb2Zm_7y9XBTB8tb-foaSENASZp9ZfHu8EbqGcqPwha-62gt4dz7miqFd9m_koR28pjUDeyDDo7Nhr1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-2xl mb-2">Reflexology Trails</h3>
+<p class="font-body-md text-white/80">Natural stone paths for vital energy.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-[40px] ambient-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive view of the medicinal garden at sunset. The rows of plants are neatly arranged, with copper nameplates identifying each herb. The golden hour light creates a magical, glowing atmosphere. The focus is on the scale and scientific care of the institute's green assets. Deep primary greens and warm amber hues dominate the palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZkLtGyeFz8ijZmZbADmSv7CmsGOdE1kOQFKt4l1tiJWHQCksjj1cAAk_cvqPzV5YORa7WWwVEfg8qxOV74TfcB2Zqq4RSa7HeF8g1vUeiunMtuZ8NsowStd-qfuUW9QzBPSp9xVcYhLjX7dBG9tBWhZNJrM_jAeM3_3Deo3zlh7D61tjBh6B1P6rzSPX7xKGXcOOq-J9QWYnxiwHkYGrdchmXKqUjK-TfvH2gP16gKHzikM8VFOodDq_zAlTNWPN9WAYFK8TZp48"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-2xl mb-2">Botanical Discovery</h3>
+<p class="font-body-md text-white/80">Over 400 species of medicinal flora.</p>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden rounded-[40px] ambient-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A peaceful forest path with sunlight streaming through the leaves, creating a 'Komorebi' effect. The path is perfectly maintained for nature walks and silent meditation. The mood is tranquil and deeply restorative, showcasing the luxurious scale of the Jindal campus. The image features a lush palette of vibrant greens and soft, sun-bleached beiges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7EZLBgTCd4CVf2ce2PIpteYskhTE4_sVQJmi9xjK8LNfSKjRUL0_PWocXB98W1lqHnxQmp34bIi9HYan7T3ajUzl08XWTzsAOPXtRwAbU07VSYg2dSsTFTBdD2W3ZUZEKASWBVe38bRxPhHInzfCaz0IYh1rMJCiVgrJM3U0tltjoGVSUKrC-U9173U5C7A2C5nliqggKSHG6_ddig5gm22cXufBp5Eox_C8ThC9z8Mm-2TqZkhpdsdYt_2_Go-QuJkNCNgU-ZzU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-3xl mb-2">Silent Nature Walks</h3>
+<p class="font-body-md text-white/80">Mornings dedicated to inner silence and bird song.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Section -->
+<section class="py-section-padding bg-tertiary-fixed" id="sustainability">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Our Pledge to the Planet</h2>
+<p class="font-body-lg text-on-tertiary-fixed-variant">We believe that human healing is inseparable from environmental health. Our campus operates on a zero-waste, sustainable philosophy.</p>
+</div>
+<div class="hidden lg:block">
+<span class="material-symbols-outlined text-8xl text-primary/10">eco</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface/80 p-10 rounded-[32px] ambient-shadow border-t-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">water_drop</span>
+<h4 class="font-headline-md text-xl mb-4">Water Recycling</h4>
+<div class="w-12 h-[1px] bg-outline-variant mb-6"></div>
+<p class="font-body-md text-on-surface-variant">100% of our water is recycled through organic filtration systems to nourish our trees.</p>
+</div>
+<div class="bg-surface/80 p-10 rounded-[32px] ambient-shadow border-t-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">solar_power</span>
+<h4 class="font-headline-md text-xl mb-4">Solar Energy</h4>
+<div class="w-12 h-[1px] bg-outline-variant mb-6"></div>
+<p class="font-body-md text-on-surface-variant">Our therapeutic facilities are powered by the abundant sun that feeds our forests.</p>
+</div>
+<div class="bg-surface/80 p-10 rounded-[32px] ambient-shadow border-t-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">recycling</span>
+<h4 class="font-headline-md text-xl mb-4">Organic Composting</h4>
+<div class="w-12 h-[1px] bg-outline-variant mb-6"></div>
+<p class="font-body-md text-on-surface-variant">Zero-waste kitchen policy turning all bio-waste into nutrient-rich soil for our gardens.</p>
+</div>
+<div class="bg-surface/80 p-10 rounded-[32px] ambient-shadow border-t-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">architecture</span>
+<h4 class="font-headline-md text-xl mb-4">Eco Architecture</h4>
+<div class="w-12 h-[1px] bg-outline-variant mb-6"></div>
+<p class="font-body-md text-on-surface-variant">Buildings designed to maximize natural ventilation and minimize environmental footprint.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-primary text-5xl opacity-30 mb-4">format_quote</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Voices of Rejuvenation</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="bg-secondary-fixed p-12 rounded-[40px] relative">
+<p class="font-body-lg text-on-secondary-fixed-variant mb-10 text-xl leading-relaxed">"The air at Jindal is unlike anything I've experienced in the city. Waking up to the sound of 50+ species of birds and the smell of fresh medicinal herbs is a luxury that money cannot buy in any other five-star resort."</p>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male executive, smiling warmly. He has a calm and rejuvenated expression. The portrait is high-end with a soft blurred background of greenery, fitting the restorative luxury theme of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZarn8xJnDbwOV8Uo6IvPcZUCYSphB1EFAr5nTqFAKOA5VX1U0UchW_mxEpYI_ZIL2vQBp4X_StKYrZpQfcOcrXUBYgm7d4ShE0yQmiA7G7mroSFb0jDGROfKDVeakdp48h36-uPRc69qqWTAntlv_L6x7GfTBOv7KSRm6CLJYDNrIH4IAN8G69klwupaJ0E9vXegqBqNXmcfXlaQlSZPgYWrgoY3GHcF9a0gxxPvGrGwM5oZYYLYfBZqZ0s9iVC3f0rZdIBzZP6E"/>
+</div>
+<div>
+<div class="font-headline-md text-lg">Rajesh Malhotra</div>
+<div class="font-label-sm text-on-secondary-fixed-variant/60 uppercase tracking-widest">Tech Entrepreneur</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-12 rounded-[40px] text-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 organic-shape -translate-y-10 translate-x-10"></div>
+<p class="font-body-lg text-white/90 mb-10 text-xl leading-relaxed">"I came for the therapies, but I stayed for the trees. The 'Forest Bathing' sessions were the highlight of my 21-day stay. My stress levels dropped significantly within the first week itself."</p>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged female with a serene, healthy glow. She is smiling confidently. The lighting is bright and natural, capturing a sense of high-fidelity wellness and peace. The background is a soft beige tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtIOfLHc7KQLjiJos_N4QpNUFjYAUxWaQ6r2iBUfQZ9fJjYNZMxakg-p2c9_K4Q9hjj6MLrTDevO7G1YJmP_G3rlt4aFpthnovXFR5ncBUERIAFrQ17_1xCVUeuFqxcQnHLE_dSio9prHDTxTZwMnM40UyKL-njJa3q3YcrwFCQXyD3VsU-KRerwgWiXpm4QF7_LZ2ZyVlhOd4D6HkcD69pe6JRI3w3cWPU2b-vWYTYHpa6iXWduujBDRhKyLr3-coNLs7eTkb35M"/>
+</div>
+<div>
+<div class="font-headline-md text-lg text-white">Ananya Deshpande</div>
+<div class="font-label-sm text-white/60 uppercase tracking-widest">Wellness Consultant</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enquiry Section -->
+<section class="py-section-padding bg-surface-container" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-white rounded-[60px] overflow-hidden flex flex-col lg:flex-row ambient-shadow">
+<div class="lg:w-1/2 p-16 md:p-24 bg-primary-container text-surface flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Start Your Journey Today</h2>
+<p class="font-body-lg text-white/80 mb-12">Connect with our admissions team to learn more about our green campus and customized nature-based treatments.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+<div>
+<h5 class="font-headline-md text-lg mb-1">Visit Us</h5>
+<p class="font-body-md text-white/60">Jindal Nagar, Tumkur Road, Bengaluru, Karnataka 560073</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary-fixed">call</span>
+<div>
+<h5 class="font-headline-md text-lg mb-1">Contact</h5>
+<p class="font-body-md text-white/60">+91 80 2371 7777<br/>admissions@jindalnaturecure.org</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 flex gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-lg">share</span>
+</div>
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-lg">public</span>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 p-16 md:p-24">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Full Name</label>
+<input class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-outline-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Phone Number</label>
+<input class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-outline-variant" placeholder="+91 000 000 0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Email Address</label>
+<input class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-outline-variant" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Preferred Month</label>
+<select class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 transition-all">
+<option>Select a month</option>
+<option>Next 3 Months</option>
+<option>Next 6 Months</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Message (Optional)</label>
+<textarea class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-outline-variant" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 rounded-full font-label-sm uppercase tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-[160px] relative overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a single green leaf with intricate veins, glowing with backlit sunlight. The visual texture is organic and detailed, used as a subtle background pattern for a premium wellness brand. The lighting is warm and golden, reinforcing a sense of vitality and nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRTv4Kt4I0jGA-OkRK8n7eC8705wgkq49npgHoR5BY5LlD_fLtaD8RLnRa0Gtz3G_aysWLNrRkk_YcR0Ks_-SySUpR4hK7Iw1KzU9CQuXRq9ufL-LqBqfCF8KJD-yqLDus5rQkxcg9k61Mg1YhC_fjw3lHyQXa5QNS6KMp_pHJoJVrBgEvJIV8mc_y1hQl64QtEN-n-jwju8v1H-H7OLJ1vW--8JuytTKIVr_R9_GEv3X0SG2XlFSO4F3b9No-tNixeKjPUVR5l2w"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center text-surface">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Reconnect with Nature. <br/>Rejuvenate Your Health.</h2>
+<p class="font-body-lg text-white/80 max-w-2xl mx-auto mb-12">Your path to holistic wellness begins in the quiet corridors of our emerald campus.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-primary-fixed text-primary px-12 py-5 rounded-full font-label-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl">Book Your Stay</button>
+<button class="border border-white/40 text-white px-12 py-5 rounded-full font-label-sm uppercase tracking-widest hover:bg-white/10 transition-all">Explore Treatments</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary-fixed dark:bg-tertiary-container w-full rounded-t-xl opacity-90 hover:opacity-100 transition-opacity border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<div class="mb-12 md:mb-0">
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim block mb-6">Jindal Naturecure</span>
+<p class="max-w-xs font-body-md text-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container">Empowering life through the scientific application of natural laws and the healing power of the earth.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h6 class="font-label-sm text-primary mb-6 uppercase tracking-widest">Explore</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Our Campus</a></li>
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Therapies</a></li>
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Research</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm text-primary mb-6 uppercase tracking-widest">Legacy</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Sustainability Report</a></li>
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Global Affiliations</a></li>
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h6 class="font-label-sm text-primary mb-6 uppercase tracking-widest">Legal</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-secondary-fixed-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed underline underline-offset-4 transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-10 border-t border-outline-variant/30 text-center md:text-left">
+<p class="font-body-md text-on-secondary-fixed-variant/60 dark:text-on-tertiary-container/60">© 2024 Jindal Naturecure Institute. Dedicated to Restorative Luxury &amp; Sustainable Healing.</p>
+</div>
+</footer>
+</body></html>

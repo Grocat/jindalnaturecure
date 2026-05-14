@@ -2694,6 +2694,122 @@
       text-transform: uppercase;
       letter-spacing: 0.3em;
     }
+
+    /* Mobile responsive font-size and spacing adjustments */
+    @media (max-width: 768px) {
+      html {
+        font-size: 15px;
+      }
+
+      body {
+        line-height: 1.55;
+      }
+
+      .hero-section {
+        min-height: auto;
+        padding: 6rem 0 3rem;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 0.85rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      .campus-description,
+      .card-desc,
+      .feature-desc,
+      .metric-description,
+      .map-card p,
+      .cta-header-label {
+        font-size: 0.95rem;
+      }
+
+      .metric-value {
+        font-size: 2rem;
+      }
+
+      .metric-name {
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+      }
+
+      .feature-title,
+      .visual-box-title {
+        font-size: 1.35rem;
+      }
+
+      .feature-item {
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .map-card,
+      .campus-grid,
+      .features-grid,
+      .experience-grid,
+      .bento-grid {
+        gap: 1.5rem;
+      }
+
+      .footer {
+        padding: 60px 0 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 14px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .campus-description,
+      .card-desc,
+      .feature-desc,
+      .metric-description {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        font-size: 0.75rem;
+        padding: 0.85rem 1rem;
+      }
+
+      .metric-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .metric-value {
+        font-size: 1.75rem;
+      }
+
+      .feature-item {
+        gap: 0.75rem;
+      }
+    }
   </style>
 </head>
 

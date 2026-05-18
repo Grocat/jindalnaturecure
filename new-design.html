@@ -7,6 +7,7 @@
   <title>Green Campus | Jindal Naturecure Institute</title>
 
   <!-- Fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -2889,29 +2890,610 @@
       }
     }
   </style>
-</head>
+  </style>
+
+  <!-- ================= JINDAL STYLE HEADER + LEFT TOGGLE MENU + FOOTER ================= -->
+
+  <style>
+  /* ================= GLOBAL ================= */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #666666;
+  }
+
+  /* ================= HEADER ================= */
+
+  .jni-main-header {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .jni-header-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 50px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ================= LEFT TOGGLE BUTTON ================= */
+
+  .jni-left-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 38px;
+    margin-right: 15px;
+    position: relative;
+    z-index: 10003;
+  }
+
+  .morph-main-menu-button-wrapper.morph-menu-button-right,
+  .morph-main-menu-button-wrapper {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 32px !important;
+    height: 32px !important;
+    z-index: 10003 !important;
+  }
+
+  .toggle-menu-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle-menu-button-icon {
+    width: 28px;
+    display: block;
+  }
+
+  .toggle-menu-button-icon span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: #111111;
+    margin: 5px 0;
+    transition: 0.3s ease;
+  }
+
+  /* ================= LOGO ================= */
+
+  .jni-logo-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .jni-logo img {
+    max-height: 42px;
+    display: block;
+  }
+
+  /* ================= DESKTOP MENU ================= */
+
+  .jni-desktop-menu {
+    margin-left: auto;
+  }
+
+  .jni-desktop-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .jni-desktop-menu a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .jni-desktop-menu a:hover {
+    color: #0fa58f;
+  }
+
+  .jni-apply-btn {
+    background: #13ad98;
+    color: #ffffff !important;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+
+  .jni-product-btn {
+    background: #ee9900;
+    color: #ffffff !important;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+
+  /* ================= SEARCH ================= */
+
+  .jni-search {
+    margin-left: 18px;
+  }
+
+  .jni-search a {
+    color: #222222;
+    font-size: 17px;
+    text-decoration: none;
+  }
+
+  /* ================= OVERLAY ================= */
+
+  .jni-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+
+  .jni-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* ================= LEFT SLIDE MENU ================= */
+
+  .morph-menu-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: -280px !important;
+    right: auto !important;
+    width: 280px !important;
+    max-width: 85% !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    z-index: 10002 !important;
+    overflow-y: auto !important;
+    transition: left 0.35s ease !important;
+    transform: none !important;
+  }
+
+  /* Open from left */
+  .morph-menu-wrapper.active,
+  .morph-menu-wrapper.morph-menu-wrapper-active {
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* Strong override for Morph plugin right-side settings */
+  .morph-menu-button-right {
+    right: auto !important;
+    left: auto !important;
+  }
+
+  .morph-main-wrapper,
+  .morph-menu-content {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  /* ================= SLIDE MENU DESIGN ================= */
+
+  .jni-mobile-menu-header {
+    height: 50px;
+    background: #9bae8f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .jni-menu-close {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .jni-menu-search {
+    color: #ffffff;
+    font-size: 17px;
+  }
+
+  .jni-slide-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .jni-slide-menu li {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .jni-slide-menu a,
+  .jni-slide-menu button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 14px 16px;
+    color: #666666;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .jni-slide-menu a:hover,
+  .jni-slide-menu button:hover {
+    color: #0fa58f;
+  }
+
+  .jni-dropdown ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+  }
+
+  .jni-dropdown.active ul {
+    display: block;
+  }
+
+  .jni-dropdown ul a {
+    padding-left: 32px;
+    font-size: 13px;
+  }
+
+  /* ================= FOOTER ================= */
+
+  .jni-footer {
+    background: #eef3e8;
+  }
+
+  .jni-footer-main {
+    background-image: url("https://jindalnaturecure.in/wp-content/uploads/2021/06/footer-bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 35px 0 28px;
+  }
+
+  .jni-footer-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 0.8fr;
+    gap: 60px;
+  }
+
+  .jni-footer h4 {
+    margin: 0 0 12px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .jni-footer p {
+    margin: 0 0 14px;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .jni-footer a {
+    color: #666666;
+    text-decoration: none;
+  }
+
+  .jni-footer a:hover {
+    color: #0fa58f;
+  }
+
+  .jni-footer-links {
+    margin: 0 0 26px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .jni-footer-links li {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.35);
+  }
+
+  .jni-footer-links a {
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .jni-subscribe-form {
+    display: flex;
+    max-width: 320px;
+  }
+
+  .jni-subscribe-form input {
+    flex: 1;
+    border: none;
+    background: #ffffff;
+    padding: 15px 14px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .jni-subscribe-form button {
+    border: none;
+    background: #1f1f1f;
+    color: #ffffff;
+    padding: 0 18px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .jni-nabh-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .jni-nabh-col img {
+    max-width: 165px;
+    height: auto;
+  }
+
+  .jni-footer-bottom {
+    background: #97ad86;
+    padding: 18px;
+  }
+
+  .jni-footer-bottom p {
+    max-width: 1180px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  .jni-footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* ================= RESPONSIVE ================= */
+
+  @media (max-width: 991px) {
+    .jni-header-container {
+      max-width: 100%;
+      height: 50px;
+    }
+
+    .jni-left-toggle {
+      width: 34px;
+      margin-right: 12px;
+    }
+
+    .jni-logo-wrap {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .jni-logo img {
+      max-height: 38px;
+    }
+
+    .jni-desktop-menu {
+      display: none;
+    }
+
+    .jni-search {
+      margin-left: 12px;
+    }
+
+    .morph-menu-wrapper {
+      left: -280px !important;
+      width: 280px !important;
+    }
+
+    .morph-menu-wrapper.active,
+    .morph-menu-wrapper.morph-menu-wrapper-active {
+      left: 0 !important;
+    }
+
+    .jni-footer-container {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .jni-nabh-col {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .jni-header-container {
+      padding: 0 12px;
+    }
+
+    .jni-logo img {
+      max-height: 34px;
+    }
+
+    .toggle-menu-button-icon span {
+      width: 24px;
+    }
+
+    .jni-footer-main {
+      padding: 28px 0 22px;
+    }
+
+    .jni-subscribe-form {
+      max-width: 100%;
+    }
+
+    .jni-subscribe-form input {
+      width: 62%;
+    }
+
+    .jni-subscribe-form button {
+      padding: 0 12px;
+      font-size: 12px;
+    }
+
+    .jni-footer-bottom p {
+      font-size: 13px;
+      text-align: left;
+    }
+  }
+  </style>
+
+  </head>
 
 <body>
 
-  <!-- Header Section -->
-  <header class="header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="#" class="logo">Jindal Naturecure</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#metrics" class="nav-link">Metrics</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#sustainability" class="nav-link">Sustainability</a>
-        <a href="#testimonials" class="nav-link">Testimonials</a>
+    <!-- ================= HEADER START ================= -->
+
+    <header class="jni-main-header">
+
+    <div class="jni-header-container">
+
+      <div class="jni-left-toggle">
+        <div class="morph-main-menu-button-wrapper morph-menu-button-right">
+          <button id="toggle-theme-menu" class="js-toggle-disable-slidebar toggle-menu-button" aria-label="Open Menu">
+            <span class="toggle-menu-button-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="jni-logo-wrap">
+        <a href="https://jindalnaturecure.in/" class="jni-logo">
+          <img src="https://jindalnaturecure.in/wp-content/themes/jni/images/your-logo.webp" alt="Jindal Naturecure Institute">
+        </a>
+      </div>
+
+      <nav class="jni-desktop-menu">
+        <ul>
+          <li><a href="https://jindalnaturecure.in/about-us/">About Us</a></li>
+          <li><a href="https://jindalnaturecure.in/contact-us/">Contact Us</a></li>
+                 <li><a href="https://jindalnaturecure.in/green-campus/">Green Campus</a></li>
+          <li><a href="https://www.jnidesk.com/mobileapp.html">Mobile App</a></li>
+          <li><a href="https://jindalnaturecure.in/home-yoga/blog/">Blog</a></li>
+          <li><a class="jni-apply-btn" href="https://jindalnaturecure.in/submit-application/">Apply For Admission</a></li>
+          <li><a class="jni-product-btn" href="https://www.jindalherbals.com/">Our Products</a></li>
+        </ul>
       </nav>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div class="jni-search">
+        <a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass" style="color: rgb(30, 48, 80);"></i></a>
       </div>
 
     </div>
-  </header>
+
+    </header>
+
+    <!-- ================= HEADER END ================= -->
+
+
+    <!-- ================= LEFT MENU START ================= -->
+
+    <div class="jni-menu-overlay" id="jniMenuOverlay"></div>
+
+    <div class="morph-menu-wrapper" id="jniLeftMenu">
+
+      <div class="jni-mobile-menu-header">
+        <button class="jni-menu-close" id="jniMenuClose" aria-label="Close Menu">×</button>
+        <span class="jni-menu-search"><i class="fa-solid fa-magnifying-glass" style="color: rgb(30, 48, 80);"></i></span>
+      </div>
+
+      <ul class="jni-slide-menu">
+
+        <li><a href="https://jindalnaturecure.in/">Home</a></li>
+        <li><a href="https://jindalnaturecure.in/about-us/">About Us</a></li>
+        <li><a href="https://jindalnaturecure.in/submit-application/">Apply For Admission</a></li>
+ 
+      
+        <li class="jni-dropdown">
+          <button type="button">Treatments <span>⌄</span></button>
+          <ul>
+            <li><a href="#">Naturopathy</a></li>
+            <li><a href="#">Yoga Therapy</a></li>
+            <li><a href="#">Diet Therapy</a></li>
+            <li><a href="#">Physiotherapy</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Diseases Treated</a></li>
+        <li><a href="#">Preparing For Your Stay</a></li>
+
+        <li class="jni-dropdown">
+          <button type="button">Accommodation <span>⌄</span></button>
+          <ul>
+            <li><a href="#">Room Facilities</a></li>
+            <li><a href="#">Accommodation Details</a></li>
+          </ul>
+        </li>
+
+        <li class="jni-dropdown">
+          <button type="button">Charitable Activity <span>⌄</span></button>
+          <ul>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Initiatives</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Health Education Center</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="https://jindalnaturecure.in/home-yoga/blog/">Jindal Naturecure Blog</a></li>
+        <li><a href="#">Press Room</a></li>
+        <li><a href="#">Charges</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Rules</a></li>
+        <li><a href="https://jindalnaturecure.in/contact-us/">Contact Us</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="https://jindalnaturecure.in/treatments/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="#">Site Map</a></li>
+
+      </ul>
+
+    </div>
+
+    <!-- ================= LEFT MENU END ================= -->
 
   <section class="hero-section">
     <video autoplay muted loop playsinline class="hero-background">
@@ -3421,52 +4003,138 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col reveal reveal-up" style="grid-column: span 1.5;">
-          <h4
-            style="font-family: 'Montserrat', sans-serif; font-size: 1.75rem; text-transform: none; letter-spacing: -0.01em; color: #fff; margin-bottom: 2rem;">
-            Jindal Naturecure</h4>
-          <p
-            style="color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 300px; font-weight: 300; line-height: 1.8;">
-            A sanctuary of healing nestled in nature, dedicated to restorative wellness and ancient naturopathic wisdom
-            for the modern soul.</p>
-        </div>
-        <div class="footer-col reveal reveal-up delay-100">
-          <h4>Explore</h4>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Treatments</a></li>
-            <li><a href="#" class="footer-link">Accommodation</a></li>
-            <li><a href="#" class="footer-link">Special Programs</a></li>
+    <!-- ================= FOOTER START ================= -->
+
+  <footer class="jni-footer">
+
+    <div class="jni-footer-main">
+
+      <div class="jni-footer-container">
+
+        <div class="jni-footer-col">
+
+          <h4>Our Associates</h4>
+
+          <ul class="jni-footer-links">
+            <li><a href="https://www.jindalaluminium.com" target="_blank">Jindal Aluminium Limited</a></li>
+            <li><a href="https://www.sitaramjindalfoundation.org" target="_blank">Sitaram Jindal Foundation</a></li>
+            <li><a href="https://jindalnaturecare.co.in/">Jindal Naturecare Limited</a></li>
+            <li><a href="https://goo.gl/maps/JquqRVJ1ZqQ2" target="_blank">Find Us On A Map</a></li>
+            <li><a href="https://jindalnaturecure.in/">Home</a></li>
           </ul>
+
+          <form class="jni-subscribe-form">
+            <input type="email" placeholder="Enter email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+
         </div>
-        <div class="footer-col reveal reveal-up delay-200">
-          <h4>Experience</h4>
-          <ul class="footer-links">
-            <li><a href="#about" class="footer-link">Green Campus</a></li>
-            <li><a href="#" class="footer-link">Yoga & Meditation</a></li>
-            <li><a href="#" class="footer-link">Botanical Gardens</a></li>
-            <li><a href="#testimonials" class="footer-link">Visitor Voices</a></li>
-          </ul>
+
+        <div class="jni-footer-col">
+
+          <h4>Jindal Naturecure Institute</h4>
+
+          <p>
+            Jindal Nagar, Tumkur Road<br>
+            Bangalore – 560 073<br>
+            Karnataka, India.
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:info@jindalnaturecure.org">info@jindalnaturecure.org</a><br>
+            Tel (1):
+            <a href="tel:08035723600">080 35723600</a><br>
+            Tel (2):
+            <a href="tel:08023084300">080 23084300</a><br>
+            Mob:
+            <a href="tel:+919611195458">+91-9611195458</a>
+          </p>
+
         </div>
-        <div class="footer-col reveal reveal-up delay-300">
-          <h4>Connect</h4>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">Contact Us</a></li>
-            <li><a href="#" class="footer-link">Reservation</a></li>
-            <li><a href="#" class="footer-link">Knowledge Hub</a></li>
-            <li><a href="#" class="footer-link">Campus Map</a></li>
-          </ul>
+
+        <div class="jni-footer-col jni-nabh-col">
+          <img src="https://jindalnaturecure.in/wp-content/uploads/2018/04/NABH-Accredited-Logo.png" alt="NABH Accredited Logo">
         </div>
+
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Jindal Naturecure Institute. All rights reserved. Crafted for holistic healing.</p>
-      </div>
+
     </div>
+
+    <div class="jni-footer-bottom">
+      <p>
+        © Copyright 2026 All Rights Reserved |
+        <a href="https://jindalnaturecure.in/treatments/privacy-policy/">Privacy Policy</a>
+      </p>
+    </div>
+
   </footer>
+
+  <!-- ================= FOOTER END ================= -->
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const toggleBtn = document.getElementById("toggle-theme-menu");
+    const closeBtn = document.getElementById("jniMenuClose");
+    const menu = document.getElementById("jniLeftMenu");
+    const overlay = document.getElementById("jniMenuOverlay");
+
+    function openMenu() {
+      if (menu) {
+        menu.classList.add("active");
+        menu.classList.add("morph-menu-wrapper-active");
+      }
+
+      if (overlay) {
+        overlay.classList.add("active");
+      }
+
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      if (menu) {
+        menu.classList.remove("active");
+        menu.classList.remove("morph-menu-wrapper-active");
+      }
+
+      if (overlay) {
+        overlay.classList.remove("active");
+      }
+
+      document.body.style.overflow = "";
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openMenu();
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        closeMenu();
+      });
+    }
+
+    if (overlay) {
+      overlay.addEventListener("click", function () {
+        closeMenu();
+      });
+    }
+
+    document.querySelectorAll(".jni-dropdown > button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        this.parentElement.classList.toggle("active");
+      });
+    });
+
+  });
+  </script>
 
   <script>
     // Mobile Menu Toggle

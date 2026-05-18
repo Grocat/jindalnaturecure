@@ -362,124 +362,7 @@
     }
 
     /* Header Styles */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 2rem 0;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .header.scrolled {
-      background: #354028;
-      backdrop-filter: blur(12px);
-      padding: 1.2rem 0;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.75rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .nav-links {
-      display: none;
-      gap: 2.5rem;
-    }
-
-    @media (min-width: 1024px) {
-      .nav-links {
-        display: flex;
-      }
-    }
-
-    .nav-link {
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 0.7;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .nav-link:hover {
-      opacity: 1;
-      color: var(--primary-container);
-    }
-
-    /* Mobile Menu Toggle */
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      z-index: 101;
-    }
-
-    @media (min-width: 1024px) {
-      .menu-toggle {
-        display: none;
-      }
-    }
-
-    .menu-toggle span {
-      width: 25px;
-      height: 2px;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100vh;
-      background: var(--primary);
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      z-index: 100;
-      animation: slideIn 0.5s forwards;
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateX(100%);
-      }
-
-      to {
-        transform: translateX(0);
-      }
-    }
+    /* Old header styles removed - using JINDAL header instead */
 
     /* Hero Section */
     .hero-section {
@@ -2916,6 +2799,7 @@
     top: 0;
     z-index: 9999;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        padding: 10px;
   }
 
   .jni-header-container {
@@ -3833,7 +3717,7 @@
 
     <!-- Closing Statement -->
     <div style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--outline-variant); padding-top: 3rem;">
-      <p style="font-size: 1.5rem; color: var(--primary); font-style: italic; max-width: 40rem; margin: 0 auto;">
+      <p style="font-size: 25px;max-width: 40rem;margin: 0 auto;background: #364129;padding: 10px;color: #fff;width: 100%;">
         "Healing is deeper and more effective when it happens close to nature."
       </p>
     </div>
@@ -4137,35 +4021,6 @@
   </script>
 
   <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const navLinksItems = document.querySelectorAll('.nav-link');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
-    });
-
-    navLinksItems.forEach(item => {
-      item.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      });
-    });
-
-    // Header Scroll Effect
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('mainHeader');
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
     // Intersection Observer for Animations
     const observerOptions = {
       threshold: 0.15,
